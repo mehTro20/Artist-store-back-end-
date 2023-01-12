@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const Genre = require("./genreModel");
+
+const MyObjectId = mongoose.Types.ObjectId;
 
 const artistSchema = mongoose.Schema({
   name: {
@@ -20,6 +23,11 @@ const artistSchema = mongoose.Schema({
     type: Number,
     required: [true, "How old are they"],
   },
+  genre: {
+    type: MyObjectId,
+    ref: Genre,
+  },
 });
 
-module.exports = mongoose.model("Artist", artistSchema);
+Artist = mongoose.model("Artist", artistSchema);
+module.exports = Artist;

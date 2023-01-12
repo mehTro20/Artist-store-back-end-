@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/artists", require("./artistRoutes"));
+app.use("/artists", require("./Routes/artistRoutes"));
+app.use("/genres", require("./Routes/genreRoutes"));
 
-app.listen(port, () => console.log(`Server started on port ${port}!!`))
+app.listen(port, () => console.log(`Server started on port ${port}!!`));
