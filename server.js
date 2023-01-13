@@ -2,6 +2,7 @@ const express = require("express");
 const colors = require("colors");
 const dotenv = require("dotenv").config();
 const connectDB = require("./mongoose");
+const cors = require("cors");
 const port = process.env.PORT || 5000;
 
 connectDB();
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.use("/artists", require("./Routes/artistRoutes"));
 app.use("/genres", require("./Routes/genreRoutes"));

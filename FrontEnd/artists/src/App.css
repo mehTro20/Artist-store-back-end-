@@ -1,0 +1,24 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+.App {
+  text-align: center;
+}
+
+button:hover {
+  background: #03e9f4;
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2e99fd, 0 0 25px #2e99fd, 0 0 50px #2e99fd,
+    0 0 100px #2e99fd;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
