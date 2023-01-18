@@ -30,6 +30,7 @@ function App() {
       <div>
         <button
           type="button"
+          id="btn"
           className="btn btn-outline-primary"
           onClick={getData}
         >
@@ -43,6 +44,9 @@ function App() {
                 return (
                   <div key={i} className="col-sm-4">
                     <div className="border border-dark rounded-1">
+                      <div className="xBtn">
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                      </div>
 
                     <h3>{item.name}</h3>
                     <h5>Age: {item.age}</h5>
